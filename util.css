@@ -140,8 +140,14 @@
     --bg-color: 255, 197, 211;
     background-color: rgb(var(--bg-color));
 }
-
-
+.bg_blue_light {
+    --bg-color: 91, 185, 230;
+    background-color: rgb(var(--bg-color));
+}
+.bg_blue {
+    --bg-color: 0, 103, 255;
+    background-color: rgb(var(--bg-color));
+}
 
 
 /* Clases de opacidad que usan la variable --bg-color */

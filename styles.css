@@ -459,6 +459,66 @@ body {
 }
 
 
+
+
+.timeline {
+    width: fit-content;
+    position: relative;
+    padding: 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #0067FF, #0067FF);
+}
+
+.timeline_item {
+    position: relative;
+    padding-left: 70px;
+}
+.timeline_img {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    background: #0067FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+}
+
+.timeline_time {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #0067FF;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.timeline_event {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 600px) {
     #libro {
         width: 600px;
