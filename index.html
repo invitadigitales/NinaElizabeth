@@ -86,10 +86,8 @@
     
         <img src="ada4.png" class="ada ada4 no_select">
         <div class="trigger-ada trigger no_select" style=" height: 5800px;"></div>
-        <img src="ada1.png" class="ada ada2 no_select">
-        <div class="trigger-ada2 trigger no_select" style=" height: 6500px;"></div>
-        <img src="ada2.png" class="ada ada3 no_select">
-        <div class="trigger-ada3 trigger no_select" style="top: 1000; height: 6500px;"></div>
+
+
 
         
                     <h3 class="font_times">En tus quince primaveras, se despliegan sueños como mariposas al vuelo, un mundo de posibilidades te espera y en tu corazón se tejen hilos de anhelo.</h3><br>
@@ -552,62 +550,6 @@ gsap.to(".ada4", {
 });
 
 
-
-
-// ANIMACIÓN PARA .ada2 (será más lenta - 1500px)
-gsap.set(".ada2", { opacity: 0 });
-ScrollTrigger.create({
-  trigger: ".trigger-ada2",
-  start: "top 80%",
-  end: "bottom 20%",
-  onEnter: () => gsap.to(".ada2", { opacity: 1, duration: 0.3 }),
-  onLeave: () => gsap.to(".ada2", { opacity: 0, duration: 0.3 }),
-  onEnterBack: () => gsap.to(".ada2", { opacity: 1, duration: 0.3 }),
-  onLeaveBack: () => gsap.to(".ada2", { opacity: 0, duration: 0.3 })
-});
-gsap.to(".ada2", {
-  y: -150,
-  scale: 1.2,
-  scrollTrigger: {
-    trigger: ".trigger-ada2",
-    start: "top 80%", 
-    end: "bottom 20%", // Usa la altura real del trigger (1500px)
-    scrub: true,
-    onUpdate: self => {
-      const zigzag = Math.sin(self.progress * 8) * 40;
-      gsap.set(".ada2", { x: zigzag });
-    }
-  }
-});
-
-
-
-
-// ANIMACIÓN PARA .ada3 (será más lenta - 1500px)
-gsap.set(".ada3", { opacity: 0 });
-ScrollTrigger.create({
-  trigger: ".trigger-ada3",
-  start: "top 20%",
-  end: "bottom 40%",
-  onEnter: () => gsap.to(".ada3", { opacity: 1, duration: 0.3 }),
-  onLeave: () => gsap.to(".ada3", { opacity: 0, duration: 0.3 }),
-  onEnterBack: () => gsap.to(".ada3", { opacity: 1, duration: 0.3 }),
-  onLeaveBack: () => gsap.to(".ada3", { opacity: 0, duration: 0.3 })
-});
-gsap.to(".ada3", {
-  y: -150,
-  scale: 1.2,
-  scrollTrigger: {
-    trigger: ".trigger-ada3",
-    start: "top 20%", 
-    end: "bottom 40%", // Usa la altura real del trigger (1500px)
-    scrub: true,
-    onUpdate: self => {
-      const zigzag = Math.sin(self.progress * 15) * 40;
-      gsap.set(".ada3", { x: zigzag });
-    }
-  }
-});
 
 
 
